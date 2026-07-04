@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Static CI/CD Demo</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Static CI/CD Demo</h1>
+
+      <p class="subtitle">
+        This page is deployed using GitHub Actions, Docker, Helm and Argo CD.
+      </p>
+
+      <div class="info-box">
+        <div>
+          <span class="label">Version / Commit ID</span>
+          <span id="app-version" class="value">loading...</span>
+        </div>
+
+        <div>
+          <span class="label">Build Time</span>
+          <span id="build-time" class="value">loading...</span>
+        </div>
+
+        <div>
+          <span class="label">Environment</span>
+          <span id="environment" class="value">loading...</span>
+        </div>
+      </div>
+
+      <p class="footer">
+        Every new deployment should show the latest commit ID here.
+      </p>
+    </section>
+  </main>
+
+  <script src="./version.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

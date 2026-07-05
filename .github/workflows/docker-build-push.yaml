@@ -84,7 +84,7 @@ jobs:
       - name: Update onboarding values
         uses: mikefarah/yq@bbdd97482f2d439126582a59689eb1c855944955 #v4.44.3
         with:
-          cmd: yq -i '.images.tag = "'$SHORT_SHA'"' static-app/values.yaml     
+          cmd: yq -i '.image.tag = "'$SHORT_SHA'"' static-app/values.yaml     
       - name: Update Image Version in the HelmChart values.yaml
         id: deployment
         run: |

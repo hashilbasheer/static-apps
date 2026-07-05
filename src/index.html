@@ -8,71 +8,38 @@
 </head>
 <body>
   <main class="page">
-    <section class="dashboard">
+    <section class="card">
       <div class="header">
-        <div>
-          <p class="eyebrow">Production Release</p>
-          <h1>GitOps Deployment Dashboard</h1>
-          <p class="subtitle">
-            Live release information deployed through GitHub Actions, Docker, Helm, Argo CD, and Kubernetes Gateway API.
-          </p>
-        </div>
-
-        <div class="status-pill">
-          <span class="status-dot"></span>
-          Healthy
-        </div>
+        <p class="badge">Production release</p>
+        <h1>GitOps Deployment Dashboard</h1>
+        <p class="subtitle">
+          Live release information deployed through GitHub Actions, Docker, Helm, Argo CD, and Kubernetes Gateway API.
+        </p>
       </div>
 
-      <div class="grid">
-        <div class="metric-card">
-          <span class="label">Environment</span>
-          <span id="environment" class="value">loading...</span>
-        </div>
-
-        <div class="metric-card">
-          <span class="label">Commit ID</span>
-          <span id="app-version" class="value">loading...</span>
-        </div>
-
-        <div class="metric-card">
-          <span class="label">Build Time</span>
-          <span id="build-time" class="value">loading...</span>
-        </div>
-
-        <div class="metric-card">
-          <span class="label">Deployment Method</span>
-          <span class="value">Argo CD GitOps</span>
-        </div>
-
-        <div class="metric-card">
-          <span class="label">Container Runtime</span>
-          <span class="value">Kubernetes</span>
-        </div>
-
-        <div class="metric-card">
-          <span class="label">Ingress Layer</span>
-          <span class="value">Gateway API</span>
-        </div>
-      </div>
-
-      <div class="pipeline">
-        <div class="step completed">GitHub</div>
-        <div class="line"></div>
-        <div class="step completed">Docker Build</div>
-        <div class="line"></div>
-        <div class="step completed">GHCR</div>
-        <div class="line"></div>
-        <div class="step completed">Helm</div>
-        <div class="line"></div>
-        <div class="step completed">Argo CD</div>
-        <div class="line"></div>
-        <div class="step completed">Kubernetes</div>
-      </div>
-
-      <p class="footer">
-        This page represents the currently deployed container image. A new commit should update this release metadata automatically.
-      </p>
+      <table class="details-table">
+        <tbody>
+          <tr>
+            <th>Status</th>
+            <td>
+              <span class="status-dot"></span>
+              <span id="status">Healthy</span>
+            </td>
+          </tr>
+          <tr>
+            <th>Environment</th>
+            <td id="environment">loading...</td>
+          </tr>
+          <tr>
+            <th>Commit ID</th>
+            <td id="app-version">loading...</td>
+          </tr>
+          <tr>
+            <th>Build Time</th>
+            <td id="build-time">loading...</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
   </main>
 

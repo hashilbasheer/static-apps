@@ -4,46 +4,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GitOps Deployment Dashboard</title>
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./style.css?v=2" />
 </head>
 <body>
   <main class="page">
     <section class="card">
-      <div class="header">
-        <p class="badge">Production release</p>
-        <h1>GitOps Deployment Dashboard</h1>
-        <p class="subtitle">
-          Live release information deployed through GitHub Actions, Docker, Helm, Argo CD, and Kubernetes Gateway API.
-        </p>
-      </div>
+      <p class="release">Production release</p>
 
-      <table class="details-table">
-        <tbody>
-          <tr>
-            <th>Status</th>
-            <td>
-              <span class="status-dot"></span>
-              <span id="status">Healthy</span>
-            </td>
-          </tr>
-          <tr>
-            <th>Environment</th>
-            <td id="environment">loading...</td>
-          </tr>
-          <tr>
-            <th>Commit ID</th>
-            <td id="app-version">loading...</td>
-          </tr>
-          <tr>
-            <th>Build Time</th>
-            <td id="build-time">loading...</td>
-          </tr>
-        </tbody>
-      </table>
+      <h1>GitOps Deployment Dashboard</h1>
+
+      <p class="subtitle">
+        Live release information deployed through GitHub Actions, Docker, Helm, Argo CD, and Kubernetes Gateway API.
+      </p>
+
+      <div class="details">
+        <div class="row">
+          <div class="key">Status</div>
+          <div class="value healthy">Healthy</div>
+        </div>
+
+        <div class="row">
+          <div class="key">Environment</div>
+          <div class="value" id="environment">loading...</div>
+        </div>
+
+        <div class="row">
+          <div class="key">Commit ID</div>
+          <div class="value" id="app-version">loading...</div>
+        </div>
+
+        <div class="row">
+          <div class="key">Build Time</div>
+          <div class="value" id="build-time">loading...</div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <script src="./version.js"></script>
-  <script src="./app.js"></script>
+  <script src="./version.js?v=2"></script>
+  <script src="./app.js?v=2"></script>
 </body>
 </html>

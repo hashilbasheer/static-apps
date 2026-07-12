@@ -1,4 +1,4 @@
-# Static CI/CD Demo
+# Static CI/CD Demo.
 
 Simple static HTML application for demonstrating:
 
